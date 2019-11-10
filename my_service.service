@@ -1,0 +1,12 @@
+[Unit]
+Description=Example service running a python script
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /home/pi/python-service-example/service_script.py
+User=root
+StandardOutput=journal+console
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
